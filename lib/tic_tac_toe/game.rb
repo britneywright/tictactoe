@@ -21,7 +21,7 @@ module TicTacToe
 
     def game_over_message
       return "#{current_player.name} won!" if board.game_over == :winner
-      return "The game ended in a tie." if board.game_over_message == :draw
+      return "The game ended in a tie." if board.game_over == :draw
     end
 
     private
