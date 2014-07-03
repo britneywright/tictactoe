@@ -24,7 +24,7 @@ module TicTacToe
         puts row.map { |cell| cell.value.empty? ? "_" : cell.value }.join(" ")
       end
     end
-    
+
     private
 
     def default_grid
@@ -53,6 +53,7 @@ module TicTacToe
         next if winning_position_values(winning_position).all_empty?
         return true if winning_position_values(winning_position).all_same?
       end
+      false
     end
 
     def winning_position_values(winning_position)
