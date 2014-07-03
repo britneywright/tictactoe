@@ -48,5 +48,9 @@ module TicTacToe
         return true if winning_position_values(winning_position).all_same?
       end
     end
+
+    def winning_position_values(winning_position)
+      winning_position.map { |cell| cell.value }
+    end
   end
 end

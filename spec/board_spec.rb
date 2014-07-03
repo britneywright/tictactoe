@@ -122,11 +122,11 @@ module TicTacToe
       it "returns false when there is no winner or draw" do
         grid = [
           [x_cell, empty, empty],
-          [y_cell, empty, empty],
-          [y_cell, empty, empty]
+          [empty, y_cell, empty],
+          [empty, empty, y_cell]
         ]
         board = Board.new(grid: grid)
-        expect(board.game_over).to be_false
+        expect(board.game_over).to eq false
       end           
     end  
   end
